@@ -7,11 +7,11 @@
 
 #import "AppDelegate.h"
 #import <AVKit/AVKit.h>
+@import GitHubUpdates;
 
 
 @interface AppDelegate ()
-
-
+@property (nonatomic,strong)GitHubUpdater *updater;
 @end
 
 @implementation AppDelegate
@@ -25,6 +25,14 @@
         
     }];
     
+    [self checkUpdater];
+}
+
+- (void)checkUpdater{
+    self.updater = [GitHubUpdater new];
+    self.updater.user = @"chenwuyang";
+    self.updater.repository = @"https://github.com/chenwuyang/xpkt.git";
+    [self.updater checkForUpdates:nil];
 }
 
 

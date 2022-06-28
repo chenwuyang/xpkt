@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3FC546A3A6DC57176EDB9565 /* Pods_MacApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BFDAA3039F04D81AF04699 /* Pods_MacApp.framework */; };
+		E500C107286AA32000E72066 /* Relauncher in Resources */ = {isa = PBXBuildFile; fileRef = E500C105286AA32000E72066 /* Relauncher */; };
+		E500C108286AA50B00E72066 /* GitHubUpdates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E500C104286AA32000E72066 /* GitHubUpdates.framework */; };
+		E500C109286AA50B00E72066 /* GitHubUpdates.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E500C104286AA32000E72066 /* GitHubUpdates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E51B4CC128693B340012E17B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51B4CC028693B330012E17B /* Cocoa.framework */; };
 		E5340B4F2864001A008F27F2 /* NoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B4E2864001A008F27F2 /* NoticeView.m */; };
 		E59E69442864798F00DBD64E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59E69432864798F00DBD64E /* Info.plist */; };
@@ -23,10 +26,26 @@
 		E5D8EFE5285B187A000C47E4 /* VTMP4Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D8EFE3285B187A000C47E4 /* VTMP4Encoder.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E500C10A286AA50B00E72066 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E500C109286AA50B00E72066 /* GitHubUpdates.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5585C98DDD5F418BFD2151F1 /* Pods-MacApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacApp.debug.xcconfig"; path = "Target Support Files/Pods-MacApp/Pods-MacApp.debug.xcconfig"; sourceTree = "<group>"; };
 		59543FC2C9E6DFE0E136A1E6 /* Pods-MacApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacApp.release.xcconfig"; path = "Target Support Files/Pods-MacApp/Pods-MacApp.release.xcconfig"; sourceTree = "<group>"; };
 		82BFDAA3039F04D81AF04699 /* Pods_MacApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E500C104286AA32000E72066 /* GitHubUpdates.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GitHubUpdates.framework; sourceTree = "<group>"; };
+		E500C105286AA32000E72066 /* Relauncher */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = Relauncher; sourceTree = "<group>"; };
 		E51B4CC028693B330012E17B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E5340B4D2864001A008F27F2 /* NoticeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeView.h; sourceTree = "<group>"; };
 		E5340B4E2864001A008F27F2 /* NoticeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeView.m; sourceTree = "<group>"; };
@@ -55,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E500C108286AA50B00E72066 /* GitHubUpdates.framework in Frameworks */,
 				E51B4CC128693B340012E17B /* Cocoa.framework in Frameworks */,
 				E5D8EFDE285B1091000C47E4 /* WebKit.framework in Frameworks */,
 				E5D8EFDC285B1086000C47E4 /* AVKit.framework in Frameworks */,
@@ -65,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E500C103286AA32000E72066 /* GitHubUpdates */ = {
+			isa = PBXGroup;
+			children = (
+				E500C104286AA32000E72066 /* GitHubUpdates.framework */,
+				E500C105286AA32000E72066 /* Relauncher */,
+			);
+			path = GitHubUpdates;
+			sourceTree = "<group>";
+		};
 		E5D8EFB2285B0F9F000C47E4 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +115,7 @@
 		E5D8EFBD285B0F9F000C47E4 /* MacApp */ = {
 			isa = PBXGroup;
 			children = (
+				E500C103286AA32000E72066 /* GitHubUpdates */,
 				E59E69432864798F00DBD64E /* Info.plist */,
 				E5D8EFD4285B0FB3000C47E4 /* AppDelegate.h */,
 				E5D8EFD3285B0FB3000C47E4 /* AppDelegate.m */,
@@ -139,6 +169,7 @@
 				E5D8EFB8285B0F9F000C47E4 /* Frameworks */,
 				E5D8EFB9285B0F9F000C47E4 /* Resources */,
 				20FE20BC2AA754BEF0A7A1FA /* [CP] Embed Pods Frameworks */,
+				E500C10A286AA50B00E72066 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +203,8 @@
 				Base,
 			);
 			mainGroup = E5D8EFB2285B0F9F000C47E4;
+			packageReferences = (
+			);
 			productRefGroup = E5D8EFBC285B0F9F000C47E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,6 +222,7 @@
 				E5D8EFC5285B0FA2000C47E4 /* Assets.xcassets in Resources */,
 				E5D8EFC8285B0FA2000C47E4 /* Main.storyboard in Resources */,
 				E59E69442864798F00DBD64E /* Info.plist in Resources */,
+				E500C107286AA32000E72066 /* Relauncher in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +417,13 @@
 				CODE_SIGN_ENTITLEMENTS = MacApp/MacApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = DK7AP8JG8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MacApp/GitHubUpdates",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -399,7 +437,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "LanShanTech.Mac-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -415,9 +453,13 @@
 				CODE_SIGN_ENTITLEMENTS = MacApp/MacApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = DK7AP8JG8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MacApp/GitHubUpdates",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -431,7 +473,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "LanShanTech.Mac-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

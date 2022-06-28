@@ -12,8 +12,7 @@
 #import "GCDWebServer.h"
 #import "VTMP4Encoder.h"
 #import "NoticeView.h"
-
-
+#import "NoticeView.h"
 
 
 @interface ViewController()<GCDWebServerDelegate>
@@ -129,8 +128,8 @@
     //3.创建可变的request
    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     //4.添加参数
-//   NSString *param = [NSString stringWithFormat:@"account=%@&password=%@", @"", @""];
-//   request.HTTPBody = [param dataUsingEncoding:NSUTF8StringEncoding];
+   NSString *param = [NSString stringWithFormat:@"type=%@", @"2"];
+   request.HTTPBody = [param dataUsingEncoding:NSUTF8StringEncoding];
     //5.设置请求方式为POST
    request.HTTPMethod = @"POST";
     //6.设置请求头(可选, 在必要时添加)
